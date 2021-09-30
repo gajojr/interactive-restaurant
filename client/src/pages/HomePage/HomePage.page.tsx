@@ -1,9 +1,11 @@
+import LogInForm from '../../components/HomePageComponents/LogInForm/LogInForm.component';
+
 import { HomePageContainer } from './HomePage.style';
 
 const HomePage = () => {
   return (
     <HomePageContainer>
-      This is home page
+      <LogInForm />
     </HomePageContainer>
   )
 }
