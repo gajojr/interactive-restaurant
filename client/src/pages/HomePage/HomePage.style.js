@@ -7,4 +7,8 @@ export const HomePageContainer = styled.main `
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media(max-width: 761px) {
+    clip-path: none;
+  }
 `;
