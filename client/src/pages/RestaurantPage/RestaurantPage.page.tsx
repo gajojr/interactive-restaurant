@@ -1,9 +1,13 @@
 import { RestaurantPageContainer } from './RestaurantPage.style';
 
+import SidebarComponent from '../../components/RestaurantPageComponents/Sidebar/Sidebar.component';
+import Workspace from '../../components/RestaurantPageComponents/Workspace/Workspace.component';
+
 const HomePage = () => {
   return (
     <RestaurantPageContainer>
-      This is restaurant page
+      <SidebarComponent />
+      <Workspace />
     </RestaurantPageContainer>
   )
 }
