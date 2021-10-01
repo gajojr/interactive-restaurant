@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const LogInForm = styled.form `
   background-color: #fff;
@@ -38,5 +39,15 @@ export const Button = styled.button `
   &:hover {
     cursor: pointer;
     transform: scale(1.1);
+  }
+`;
+
+export const StyledLink = styled(Link)
+`
+  color: #fff;
+  text-decoration: none;
+
+  &:focus, &:hover, &:visited, &:link, &:active {
+      text-decoration: none;
   }
 `;
