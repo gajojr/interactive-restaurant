@@ -17,16 +17,16 @@ const LogInFormComponent = () => {
     <LogInForm onSubmit={LogIn}>
       <Label>
         Username:
-        <Input type="text" name="username" />
+        <Input type="text" name="username" required />
       </Label>
       <Label>
         Password:
-        <Input type="password" name="password" />
+        <Input type="password" name="password" required />
       </Label>
       <Button>Log In</Button>
       <p style={{ alignSelf: 'center', fontSize: '1.25rem', margin: 8 }}>or</p>
       <Button type="button">
-        <StyledLink to='/restaurant'>Explore as a visitor</StyledLink>
+        <StyledLink to='/restaurant'>Explore as the visitor</StyledLink>
       </Button>
     </LogInForm>
   )
