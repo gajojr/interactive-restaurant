@@ -4,6 +4,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { join } from 'path';
 import { configValidationSchema } from './config.schema';
 
 @Module({
@@ -11,6 +13,9 @@ import { configValidationSchema } from './config.schema';
     ConfigModule.forRoot({
       envFilePath: `../.env.stage.${process.env.STAGE}`,
       validationSchema: configValidationSchema,
+    }),
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..'),
     }),
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
