@@ -1,8 +1,11 @@
-import { Component } from './DraggableComponent.style';
+import { Component, Image, Name } from './DraggableComponent.style';
 
-const DraggableComponent = () => {
+const DraggableComponent = ({ component }: { component: any }) => {
   return (
-    <Component>This is draggable component</Component>
+    <Component>
+      <Image src={component.imgPath} alt={component.name} />
+      <Name>{component.name}</Name>
+    </Component>
   )
 }
 
